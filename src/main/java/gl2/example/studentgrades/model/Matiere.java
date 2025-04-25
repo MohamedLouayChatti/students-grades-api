@@ -16,7 +16,10 @@ public class Matiere {
     @OneToMany(mappedBy = "matiere", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Note> notes;
 
-    // Getters
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }
