@@ -1,0 +1,25 @@
+Etudiants:
+{
+    "nom" : "ben foulen",
+    "prenom" : "flen",
+    "filiere" : "gl2",
+    "numInscri" : 123456,
+    "cin" : 98765432
+}
+
+Matieres:
+{
+    "nom" : "App rep",
+    "unite" : "Info"
+}
+
+Notes:
+{
+    "etudiant": {
+        "id": 1
+    },
+    "matiere": {
+        "id": 1
+    },
+    "note": 15.0
+}

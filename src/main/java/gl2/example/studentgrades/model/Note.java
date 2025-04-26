@@ -1,5 +1,6 @@
 package gl2.example.studentgrades.model;
 
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 
 @Entity
@@ -11,13 +12,15 @@ public class Note {
 
     @ManyToOne
     @JoinColumn(name = "etudiant_id", nullable = false)
+    @JsonBackReference("etudiant-notes")
     private Etudiant etudiant;
 
     @ManyToOne
     @JoinColumn(name = "matiere_id", nullable = false)
+    @JsonBackReference("matiere-notes")
     private Matiere matiere;
 
-    private int note;
+    private float note;
 
     public void setId(Long id) {
         this.id = id;
@@ -43,11 +46,11 @@ public class Note {
         this.matiere = matiere;
     }
 
-    public int getNote() {
+    public float getNote() {
         return note;
     }
 
-    public void setNote(int note) {
+    public void setNote(float note) {
         this.note = note;
     }
 }

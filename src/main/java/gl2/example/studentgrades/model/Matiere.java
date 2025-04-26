@@ -1,5 +1,6 @@
 package gl2.example.studentgrades.model;
 
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -14,6 +15,7 @@ public class Matiere {
     private String unite;
 
     @OneToMany(mappedBy = "matiere", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference("matiere-notes")
     private List<Note> notes;
 
     public void setId(Long id) {

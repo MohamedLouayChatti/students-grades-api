@@ -1,5 +1,6 @@
 package gl2.example.studentgrades.model;
 
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class Etudiant {
     private int cin; // Changed to int
 
     @OneToMany(mappedBy = "etudiant", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference("etudiant-notes")
     private List<Note> notes;
 
     // Getters and Setters
