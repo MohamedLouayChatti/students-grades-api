@@ -33,5 +33,14 @@ public class EtudiantService {
     public void deleteEtudiant(Long id) {
         etudiantRepository.deleteById(id);
     }
+
+    public float calculMoyenne(Long id) {
+        Optional<Etudiant> etudiant = etudiantRepository.findById(id);
+        if (etudiant.isPresent()) {
+            return etudiant.get().calculMoyenne();
+        } else {
+            return -1;
+        }
+    }
 }
 

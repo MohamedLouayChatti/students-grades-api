@@ -30,6 +30,12 @@ public class EtudiantController {
         }
     }
 
+    @GetMapping("/moyenne/{id}")
+    public ResponseEntity<Float> getEtudiantMoyenneById(@PathVariable Long id) {
+        float moyenne = etudiantService.calculMoyenne(id);
+        return ResponseEntity.ok(moyenne);
+    }
+
     @PostMapping
     public Etudiant addEtudiant(@RequestBody Etudiant etudiant) {
         return etudiantService.addEtudiant(etudiant);

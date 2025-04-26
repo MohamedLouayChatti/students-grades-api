@@ -75,4 +75,15 @@ public class Etudiant {
     public void setNotes(List<Note> notes) {
         this.notes = notes;
     }
+
+    public float calculMoyenne() {
+        if (notes == null || notes.isEmpty()) {
+            return 0;
+        }
+        float somme = 0;
+        for (Note note : notes) {
+            somme += note.getNote();
+        }
+        return somme / notes.size();
+    }
 }
