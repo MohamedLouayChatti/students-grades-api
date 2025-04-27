@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifiez Étudiant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <a href="etudiants.html" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left"></i> Retour
+            </a>
+            <h1 class="text-center flex-grow-1">Modifiez l'étudiant</h1>
+        </div>
+
+        <form id="updateStudentForm">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="nom" name="nom" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="prenom" class="form-label">Prénom</label>
+                    <input type="text" class="form-control" id="prenom" name="prenom" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="filiere" class="form-label">Filière</label>
+                <input type="text" class="form-control" id="filiere" name="filiere" required>
+            </div>
+            <div class="mb-3">
+                <label for="numeroInscription" class="form-label">Numéro d'inscription</label>
+                <input type="text" class="form-control" id="numeroInscription" name="numeroInscription" required>
+            </div>
+            <div class="mb-3">
+                <label for="cin" class="form-label">CIN</label>
+                <input type="text" class="form-control" id="cin" name="cin" required>
+            </div>
+
+            <div class="mb-3">
+                <h5>Notes</h5>
+                <div id="notesList"></div>
+                <button type="button" class="btn btn-secondary mt-2" id="addNoteButton">Ajouter une note</button>
+            </div>
+
+            <div class="d-flex justify-content-center mt-4">
+                <button type="submit" class="btn btn-warning">Mettre à jour</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/updateEtudiant.js"></script>
+</body>
+</html>
