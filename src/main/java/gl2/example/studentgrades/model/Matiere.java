@@ -15,7 +15,7 @@ public class Matiere {
     private String unite;
 
     @OneToMany(mappedBy = "matiere", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference("matiere-notes")
+    @JsonIgnoreProperties("matiere")
     private List<Note> notes;
 
     public void setId(Long id) {

@@ -14,11 +14,11 @@ public class Etudiant {
     private String nom;
     private String prenom;
     private String filiere;
-    private int numInscri; // Changed to int
-    private int cin; // Changed to int
+    private int numInscri;
+    private int cin;
 
     @OneToMany(mappedBy = "etudiant", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference("etudiant-notes")
+    @JsonIgnoreProperties("etudiant")
     private List<Note> notes;
 
     // Getters and Setters
@@ -54,19 +54,19 @@ public class Etudiant {
         this.filiere = filiere;
     }
 
-    public int getNumInscri() { // Updated getter
+    public int getNumInscri() {
         return numInscri;
     }
 
-    public void setNumInscri(int numInscri) { // Updated setter
+    public void setNumInscri(int numInscri) {
         this.numInscri = numInscri;
     }
 
-    public int getCin() { // Updated getter
+    public int getCin() {
         return cin;
     }
 
-    public void setCin(int cin) { // Updated setter
+    public void setCin(int cin) {
         this.cin = cin;
     }
 

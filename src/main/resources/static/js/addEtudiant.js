@@ -120,8 +120,7 @@ document.getElementById('addStudentForm').addEventListener('submit', async (e) =
                 }
             }
 
-            // Optionally, reset the form or redirect
-            form.reset();
+            window.location.replace('../etudiants.html');
         } else {
             console.error('Failed to add student:', studentResponse.statusText);
         }

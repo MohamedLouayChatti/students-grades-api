@@ -12,12 +12,12 @@ public class Note {
 
     @ManyToOne
     @JoinColumn(name = "etudiant_id", nullable = false)
-    @JsonBackReference("etudiant-notes")
+    @JsonIgnoreProperties("notes")
     private Etudiant etudiant;
 
     @ManyToOne
     @JoinColumn(name = "matiere_id", nullable = false)
-    @JsonBackReference("matiere-notes")
+    @JsonIgnoreProperties("notes")
     private Matiere matiere;
 
     private float note;

@@ -35,6 +35,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 loadMoyenne(student.id);
             });
 
+            document.querySelectorAll(".viewBtn").forEach(button => {
+                button.addEventListener("click", function () {
+                    console.log("clicked view");
+                    const studentId = this.dataset.id;
+                    window.location.href = `../etudiantInfo.html?id=${studentId}`;
+                });
+            });
+
+            document.querySelectorAll(".updateBtn").forEach(button => {
+                button.addEventListener("click", function () {
+                    console.log("clicked update");
+                    const studentId = this.dataset.id;
+                    window.location.href = `../updateEtudiant.html?id=${studentId}`;
+                });
+            });
+
         } catch (error) {
             console.error("Error loading students:", error);
         }
