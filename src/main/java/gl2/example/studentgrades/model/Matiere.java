@@ -14,7 +14,7 @@ public class Matiere {
     private String nom;
     private String unite;
 
-    @OneToMany(mappedBy = "matiere", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "matiere", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("matiere")
     private List<Note> notes;
 

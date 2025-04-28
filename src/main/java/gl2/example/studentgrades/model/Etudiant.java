@@ -17,7 +17,7 @@ public class Etudiant {
     private int numInscri;
     private int cin;
 
-    @OneToMany(mappedBy = "etudiant", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "etudiant", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("etudiant")
     private List<Note> notes;
 

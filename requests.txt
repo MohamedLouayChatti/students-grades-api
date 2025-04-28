@@ -12,6 +12,10 @@ Matieres:
     "nom" : "App rep",
     "unite" : "Info"
 }
+{
+    "nom" : "analyse",
+    "unite":"maths"
+}
 
 Notes:
 {
